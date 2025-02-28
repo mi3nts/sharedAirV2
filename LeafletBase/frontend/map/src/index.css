@@ -1,0 +1,27 @@
+html, body, #root, .app-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the navbar */
+.navbar {
+  height: 60px; /* Fixed height */
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+/* Allow the map to take up remaining space */
+.map-wrapper {
+  flex-grow: 1; /* Expands to fill remaining space */
+  width: 100%;
+}
