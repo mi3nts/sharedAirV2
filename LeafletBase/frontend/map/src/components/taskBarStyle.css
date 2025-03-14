@@ -1,0 +1,18 @@
+.navbar {
+  background-color: #333; /* Dark background color */
+  color: white; /* White font color */
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+.navbar-brand, .navbar-nav .nav-link, .btn {
+  color: white; /* Ensure all text and buttons are white */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between; /* Ensure content is spaced out */
+}

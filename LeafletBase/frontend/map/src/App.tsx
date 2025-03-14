@@ -1,25 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MainMap from "./components/MainMap.tsx";
 import TaskBar from "./components/taskBar.tsx";
+
 function App() {
-  // const [count, setCount] = useState(0);
+  const [mapConfig, setMapConfig] = useState<{
+    center: [number, number];
+    zoom: number;
+  } | null>(null);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/standard")
+      .then((response) => response.json())
+      .then((data) => setMapConfig(data))
+      .catch((error) => console.error("Error fetching map config:", error));
+  }, []);
+
+  if (!mapConfig) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
-    <div>
-      
-    </div>
-    <div>
-
-    </div>
-      <MainMap center={[37.7749, -122.4194]} zoom={12} />
-      {/* <Marker position={[38.7749, -122.4194]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker> */}
+      <div>
+        <TaskBar />
+        <MainMap center={mapConfig.center} zoom={mapConfig.zoom} />
+      </div>
     </>
   );
 }
