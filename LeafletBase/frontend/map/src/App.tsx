@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import MainMap from "./components/MainMap.tsx";
 import TaskBar from "./components/taskBar.tsx";
+// import Dropdown from "./components/DropdownFolder/Dropdown.tsx";
+// import MapSelector from "./components/MapSelector.tsx";
 
 function App() {
   const [mapConfig, setMapConfig] = useState<{
     center: [number, number];
     zoom: number;
+    markerPosition: [number, number];
   } | null>(null);
 
   useEffect(() => {
@@ -24,7 +27,11 @@ function App() {
     <>
       <div>
         <TaskBar />
-        <MainMap center={mapConfig.center} zoom={mapConfig.zoom} />
+        <MainMap
+          center={mapConfig.center}
+          zoom={mapConfig.zoom}
+          markerPosition={mapConfig.markerPosition}
+        />
       </div>
     </>
   );

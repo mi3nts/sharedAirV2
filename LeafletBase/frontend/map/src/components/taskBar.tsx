@@ -1,20 +1,51 @@
 import React from "react";
 import "./taskBarStyle.css"; // Import the CSS file
+import logoImageLoc from "../assets/MINTSLogo.jpeg";
 
 function TaskBar(): JSX.Element {
   return (
-    <div>
-      <nav className="navbar bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand">Task Bar</a>
-          <form className="d-flex" role="search">
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
-    </div>
+    <nav className="navbar bg-body-tertiary">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          <img
+            src={logoImageLoc}
+            alt="Logo"
+            width="30"
+            height="30"
+            className="d-inline-block align-text-top"
+          />
+          Bootstrap
+        </a>
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown link
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                Action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Another action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Something else here
+              </a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </nav>
   );
 }
 

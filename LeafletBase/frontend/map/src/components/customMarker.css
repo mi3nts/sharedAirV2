@@ -1,0 +1,27 @@
+/* Override the default Leaflet popup styles if necessary */
+.custom-popup {
+    /* Remove default background to use our custom one */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Style the content inside the popup */
+  .popup-content {
+    background-color: #464646; 
+    width: 300px;  /* Set desired width */
+    height: 300px; /* Set desired height */
+    color: #cccccc;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    border-radius: 4px; /* Optional: round corners */
+  }k
+  
+  /* Optional: Remove default popup tip/arrow */
+  .leaflet-popup-tip-container {
+    display: none;
+  }

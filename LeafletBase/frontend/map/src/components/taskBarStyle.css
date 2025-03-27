@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Ensure it is above other content */
+   z-index: 1000; /*Ensure it is above other content*/
 }
 
 .navbar-brand, .navbar-nav .nav-link, .btn {
@@ -15,4 +15,9 @@
 .container-fluid {
   display: flex;
   justify-content: space-between; /* Ensure content is spaced out */
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1050; /* Or a higher value if needed */
 }

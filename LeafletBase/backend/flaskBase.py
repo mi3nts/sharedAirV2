@@ -7,8 +7,9 @@ CORS(app)  # Enable cross-origin requests for frontend
 @app.route('/standard', methods=['GET'])
 def get_standard():
     config = {
-        'center': [37.7749, -122.4194],
-        'zoom': 12
+        'center': [33.157309, -96.789],
+        'zoom': 13 ,
+        'markerPosition': [33.157309, -96.789] 
     }
     return jsonify(config)
 
