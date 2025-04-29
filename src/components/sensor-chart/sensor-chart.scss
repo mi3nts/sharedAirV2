@@ -1,0 +1,18 @@
+.popup-chart {
+    text {
+        font: 12px sans-serif;
+    }
+
+    .chart2 {
+        height: 40vh;
+    }
+
+    .fullscreen-btn {
+        margin: 1vh;
+    }
+
+    .nv-axis.nv-x .tick line {
+        display: none;
+    }
+    .nv-x text{display: none;}
+}
